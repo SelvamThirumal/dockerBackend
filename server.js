@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 // MongoDB Connection
-mongoose.connect("mongodb://localhost:27017/mydatabase")
+mongoose.connect("mongodb+srv://v7060vinsup_db_user:Vinsup2026@mydb.qtmiowq.mongodb.net/?appName=Mydb")
 .then(() => {
     console.log("✅ Connected to MongoDB");
 })
@@ -20,4 +20,4 @@ mongoose.connect("mongodb://localhost:27017/mydatabase")
 // Server
 app.listen(3000, () => {
     console.log("🚀 Server is running on port 3000");
-});3
+});

@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 // MongoDB Connection
-mongoose.connect("mongodb+srv://v7060vinsup_db_user:Vinsup2026@mydb.qtmiowq.mongodb.net/?appName=Mydb")
+mongoose.connect("mongodb://mongo:27017/mydatabase")
 .then(() => {
     console.log("✅ Connected to MongoDB");
 })

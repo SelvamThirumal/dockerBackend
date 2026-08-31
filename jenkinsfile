@@ -20,5 +20,15 @@ pipeline {
                 sh 'docker build -t mern-backend .'
             }
         }
+
+        stage('Run Docker Container') {
+            steps {
+                sh '''
+                    docker stop mern-backend || true
+                    docker rm mern-backend || true
+                    docker run -d --name mern-backend -p 3004:3000 mern-backend
+                '''
+            }
+        }
     }
 }
